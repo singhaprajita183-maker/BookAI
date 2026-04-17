@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookAI – Smart Book Search</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <h1 class="logo">📚 BookAI</h1>
+        <p class="tagline">Find your next great read</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="search-section" aria-label="Book search">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search for books, authors, or topics…"
+            aria-label="Search for books"
+            autocomplete="off"
+          />
+          <button id="searchBtn" class="btn btn-search" aria-label="Search">
+            🔍 Search
+          </button>
+          <button
+            id="voiceBtn"
+            class="btn btn-voice"
+            aria-label="Start voice search"
+            title="Voice Search"
+          >
+            🎤 Voice
+          </button>
+        </div>
+        <p id="voiceStatus" class="voice-status" aria-live="polite"></p>
+      </section>
+
+      <section
+        id="resultsSection"
+        class="results-section"
+        aria-label="Search results"
+        aria-live="polite"
+      >
+        <p class="placeholder-text">
+          Use the search bar above or press <strong>🎤 Voice</strong> to get
+          started.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Powered by
+        <a
+          href="https://books.google.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Google Books API</a
+        >
+        &amp; Web Speech API
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
